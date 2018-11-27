@@ -4,7 +4,3 @@ spring:
         username: spring
         password: mf15mdj
         validation-query: select 1
-    schema:
-        - schema.sql
-    data:
-        - data.sql

@@ -18,8 +18,6 @@ public class ProducerController {
         this.booksRepositoryJPA = booksRepositoryJPA;
     }
 
-
-
     @PostMapping(path = "/addmsg", consumes="application/json")
     @ResponseStatus(HttpStatus.CREATED)
     public Book addMsg(@RequestBody Book book) {

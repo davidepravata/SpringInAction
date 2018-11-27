@@ -18,6 +18,7 @@
         <module>library-app</module>
         <module>library-messaging-consumer</module>
     </modules>
+
     <packaging>pom</packaging>
 
     <name>SpringInAction</name>

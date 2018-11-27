@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>library-messaging-producer-rabbitmq</artifactId>
+    <artifactId>library-messaging-producer-library.consumer.rabbitmq</artifactId>
 
 
 </project>

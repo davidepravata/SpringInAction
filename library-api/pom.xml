@@ -37,17 +37,17 @@
         </dependency>
         <dependency>
             <groupId>test</groupId>
-            <artifactId>library-messaging-producer-jms</artifactId>
+            <artifactId>library-messaging-producer-library.consumer.jms</artifactId>
         <version>${library.version}</version>
         </dependency>
         <!--<dependency>
             <groupId>test</groupId>
-                <artifactId>library-messaging-producer-kafka</artifactId>
+                <artifactId>library-messaging-producer-library.consumer.kafka</artifactId>
                 <version>${library.version}</version>
         </dependency>
         <dependency>
             <groupId>test</groupId>
-            <artifactId>library-messaging-producer-rabbitmq</artifactId>
+            <artifactId>library-messaging-producer-library.consumer.rabbitmq</artifactId>
             <version>${library.version}</version>
         </dependency>
         -->

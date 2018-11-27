@@ -29,18 +29,18 @@
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:2.1.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-orm:5.1.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aspects:5.1.2.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-security:2.1.0.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.1.2.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:5.1.1.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:5.1.1.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:5.1.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-jdbc:2.1.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: com.zaxxer:HikariCP:3.2.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:5.1.2.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: mysql:mysql-connector-java:8.0.13" level="project" />
     <orderEntry type="module" module-name="librarydomain" />
     <orderEntry type="module" module-name="librarysecurity" />
-    <orderEntry type="module" module-name="librarymessagingproducerjms" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-security:2.1.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.1.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:5.1.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:5.1.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:5.1.1.RELEASE" level="project" />
+    <orderEntry type="module" module-name="library-messaging-producer-library.consumer.jms" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:2.1.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.1.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.1.0.RELEASE" level="project" />

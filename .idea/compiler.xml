@@ -7,15 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="library-messaging" />
+        <module name="library-messaging-producer-library.consumer.jms" />
+        <module name="library-messaging-producer-library.consumer.kafka" />
+        <module name="library-messaging-producer-library.consumer.rabbitmq" />
         <module name="libraryapi" />
         <module name="libraryapp" />
         <module name="librarydata" />
         <module name="librarydomain" />
         <module name="librarymessagingconsumer" />
         <module name="librarymessagingjms" />
-        <module name="librarymessagingproducerjms" />
-        <module name="librarymessagingproducerkafka" />
-        <module name="librarymessagingproducerrabbitmq" />
         <module name="librarysecurity" />
         <module name="libraryweb" />
       </profile>
@@ -24,6 +24,9 @@
       <module name="data" target="1.8" />
       <module name="domain" target="1.8" />
       <module name="library-messaging" target="1.8" />
+      <module name="library-messaging-producer-library.consumer.jms" target="1.8" />
+      <module name="library-messaging-producer-library.consumer.kafka" target="1.8" />
+      <module name="library-messaging-producer-library.consumer.rabbitmq" target="1.8" />
       <module name="libraryapi" target="1.8" />
       <module name="libraryapp" target="1.8" />
       <module name="librarydata" target="1.8" />
@@ -44,6 +47,9 @@
       <module name="data" options="-parameters" />
       <module name="domain" options="-parameters" />
       <module name="library-messaging" options="-parameters" />
+      <module name="library-messaging-producer-library.consumer.jms" options="-parameters" />
+      <module name="library-messaging-producer-library.consumer.kafka" options="-parameters" />
+      <module name="library-messaging-producer-library.consumer.rabbitmq" options="-parameters" />
       <module name="libraryapi" options="-parameters" />
       <module name="libraryapp" options="-parameters" />
       <module name="librarydata" options="-parameters" />

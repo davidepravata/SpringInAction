@@ -10,16 +10,16 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Profile("library.consumer.jms-template")
 @Component("templateBooksOrderReceiver")
-public class JmsBooksOrderReceiver implements BooksOrderReceiver {
+public class JmsBookOrderReceiver implements BookOrderReceiver {
 
   private JmsTemplate jms;
 
-  public JmsBooksOrderReceiver(JmsTemplate jms) {
+  public JmsBookOrderReceiver(JmsTemplate jms) {
     this.jms = jms;
   }
   
   @Override
-  public Book receiveBooksOrder() {
+  public Book receiveBookOrder() {
     log.info("Message Received on JMS");
 
     return (Book) jms.receiveAndConvert("library.books.queue");

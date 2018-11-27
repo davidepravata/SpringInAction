@@ -1,12 +1,12 @@
 -- With it, users can enter information about books they want to read, view the list, and remove books once they’ve been read
 drop table if exists registered_user;
 drop table if exists userauthorities;
-drop table if exists users_books;
-drop table if exists books;
-drop table if exists users;
+drop table if exists user_book;
+drop table if exists book;
+drop table if exists user;
 
 
-create table books(
+create table book(
     id bigint(20) NOT NULL AUTO_INCREMENT,
     title varchar(255) NOT NULL,
     cost decimal(10,2) NOT NULL,
@@ -15,7 +15,7 @@ create table books(
     UNIQUE KEY(isbn)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-create table users(
+create table user(
     id bigint(20) NOT NULL AUTO_INCREMENT,
     username varchar(255) NOT NULL,
     password varchar(255) NOT NULL,
@@ -31,10 +31,10 @@ create table userauthorities(
     username varchar(255) NOT NULL,
     authority varchar(255) NOT NULL,
     PRIMARY KEY (`id`),
-    FOREIGN KEY (username) REFERENCES users(username)
+    FOREIGN KEY (username) REFERENCES user(username)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-create table users_books(
+create table user_book(
     id bigint(20) NOT NULL AUTO_INCREMENT,
     id_user bigint(20) NOT NULL,
     id_book bigint(20) NOT NULL,

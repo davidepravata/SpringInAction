@@ -18,11 +18,11 @@ public class BooksRepositoryJDBC implements BooksRepository {
     public BooksRepositoryJDBC(JdbcTemplate jdbc) { this.jdbc = jdbc; }
 
     @Override
-    public List<Book> findAllBooks() { return jdbc.query("select id, title, cost, isbn from books", this::mapRowToBooks); }
+    public List<Book> findAllBooks() { return jdbc.query("select id, title, cost, isbn from book", this::mapRowToBooks); }
 
     @Override
     public Book save(Book newBook) {
-        jdbc.update("insert into books values(?,?,?,?);", newBook.getId(),newBook.getTitle(), newBook.getCost(), newBook.getIsbn());
+        jdbc.update("insert into book values(?,?,?,?);", newBook.getId(),newBook.getTitle(), newBook.getCost(), newBook.getIsbn());
         return newBook;
     }
 

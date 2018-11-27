@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="library-messaging" />
+        <module name="libraryapi" />
+        <module name="libraryapp" />
+        <module name="librarydata" />
+        <module name="librarydomain" />
+        <module name="librarymessagingconsumer" />
+        <module name="librarymessagingjms" />
+        <module name="librarymessagingproducerjms" />
+        <module name="librarymessagingproducerkafka" />
+        <module name="librarymessagingproducerrabbitmq" />
+        <module name="librarysecurity" />
+        <module name="libraryweb" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="data" target="1.8" />
+      <module name="domain" target="1.8" />
+      <module name="library-messaging" target="1.8" />
+      <module name="libraryapi" target="1.8" />
+      <module name="libraryapp" target="1.8" />
+      <module name="librarydata" target="1.8" />
+      <module name="librarydomain" target="1.8" />
+      <module name="librarymessagingconsumer" target="1.8" />
+      <module name="librarymessagingjms" target="1.8" />
+      <module name="librarymessagingproducerjms" target="1.8" />
+      <module name="librarymessagingproducerkafka" target="1.8" />
+      <module name="librarymessagingproducerrabbitmq" target="1.8" />
+      <module name="librarysecurity" target="1.8" />
+      <module name="libraryweb" target="1.8" />
+      <module name="SpringInAction" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="SpringInAction" options="-parameters" />
+      <module name="data" options="-parameters" />
+      <module name="domain" options="-parameters" />
+      <module name="library-messaging" options="-parameters" />
+      <module name="libraryapi" options="-parameters" />
+      <module name="libraryapp" options="-parameters" />
+      <module name="librarydata" options="-parameters" />
+      <module name="librarydomain" options="-parameters" />
+      <module name="librarymessagingconsumer" options="-parameters" />
+      <module name="librarymessagingjms" options="-parameters" />
+      <module name="librarymessagingproducerjms" options="-parameters" />
+      <module name="librarymessagingproducerkafka" options="-parameters" />
+      <module name="librarymessagingproducerrabbitmq" options="-parameters" />
+      <module name="librarysecurity" options="-parameters" />
+      <module name="libraryweb" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,6 +1,6 @@
 package library.restapi.hyperlinks;
 
-import library.entities.Books;
+import library.entities.Book;
 import org.springframework.hateoas.ResourceSupport;
 import org.springframework.hateoas.core.Relation;
 
@@ -11,7 +11,7 @@ public class BooksResource extends ResourceSupport {
     private String cost;
     private String isbn;
 
-    public BooksResource(Books book) {
+    public BooksResource(Book book) {
         this.title = book.getTitle();
         this.cost = book.getCost();
         this.isbn = book.getIsbn();

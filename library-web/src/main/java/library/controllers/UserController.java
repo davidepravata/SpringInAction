@@ -1,6 +1,6 @@
 package library.controllers;
 
-import library.entities.Users;
+import library.entities.User;
 import library.repositories.jpa.UsersRepositoryJPA;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,19 +12,19 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/users")
-public class UsersController {
+public class UserController {
 
     private UsersRepositoryJPA usersRepositoryJPA;
 
     @Autowired
-    public UsersController(UsersRepositoryJPA usersRepositoryJPA) {
+    public UserController(UsersRepositoryJPA usersRepositoryJPA) {
         this.usersRepositoryJPA = usersRepositoryJPA;
     }
 
     @RequestMapping(method=RequestMethod.GET)
     public String retrieveAvailableUsers(Model model) {
 
-        List<Users> availableUsers = usersRepositoryJPA.findAll();
+        List<User> availableUsers = usersRepositoryJPA.findAll();
         if (availableUsers != null) {
             model.addAttribute("users", availableUsers);
         }
@@ -32,7 +32,7 @@ public class UsersController {
     }
 
     @RequestMapping(method=RequestMethod.POST)
-    public String addUsers(Users user) {
+    public String addUsers(User user) {
         usersRepositoryJPA.save(user);
         return "redirect:/users";
     }

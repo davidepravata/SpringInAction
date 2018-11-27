@@ -1,6 +1,6 @@
 package library.producer.jms;
 
-import library.entities.Books;
+import library.entities.Book;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Profile;
 import org.springframework.jms.core.JmsTemplate;
@@ -19,10 +19,10 @@ public class JmsBooksOrderReceiver implements BooksOrderReceiver {
   }
   
   @Override
-  public Books receiveBooksOrder() {
+  public Book receiveBooksOrder() {
     log.info("Message Received on JMS");
 
-    return (Books) jms.receiveAndConvert("library.books.queue");
+    return (Book) jms.receiveAndConvert("library.books.queue");
   }
   
 }

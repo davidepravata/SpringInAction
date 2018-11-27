@@ -53,7 +53,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
   DataSource dataSource;
   @Override
   protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-      auth.jdbcAuthentication().dataSource(dataSource).usersByUsernameQuery("select username, plain_password, enabled from Users where username=?")
+      auth.jdbcAuthentication().dataSource(dataSource).usersByUsernameQuery("select username, plain_password, enabled from User where username=?")
               .authoritiesByUsernameQuery("select username, authority from userauthorities where username=?")
               .passwordEncoder(NoOpPasswordEncoder.getInstance());
   }
@@ -67,7 +67,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
   @Override
   protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-     auth.jdbcAuthentication().dataSource(dataSource).usersByUsernameQuery("select username, password, enabled from Users where username=?").authoritiesByUsernameQuery("select username, authority from UserAuthorities where username=?");
+     auth.jdbcAuthentication().dataSource(dataSource).usersByUsernameQuery("select username, password, enabled from User where username=?").authoritiesByUsernameQuery("select username, authority from UserAuthorities where username=?");
   }
 
 */

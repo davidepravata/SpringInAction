@@ -1,7 +1,7 @@
 package library.producer.jms;
 
-import library.entities.Books;
+import library.entities.Book;
 
 public interface BooksOrderReceiver {
-    Books receiveBooksOrder();
+    Book receiveBooksOrder();
 }

@@ -11,7 +11,7 @@ email varchar(255) DEFAULT NULL,
 PRIMARY KEY (`id`)
 ) */
 @Entity
-public class Users {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -56,7 +56,7 @@ public class Users {
 
     @Override
     public String toString() {
-        return "library.entities.Users{" +
+        return "library.entities.User{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +

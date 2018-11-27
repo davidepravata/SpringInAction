@@ -1,6 +1,6 @@
 package library.restapi.hyperlinks;
 
-import library.entities.Books;
+import library.entities.Book;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.hateoas.EntityLinks;
@@ -13,13 +13,13 @@ import org.springframework.hateoas.ResourceProcessor;
 public class SpringDataRestConfiguration {
 
     @Bean
-    public ResourceProcessor<PagedResources<Resource<Books>>>
+    public ResourceProcessor<PagedResources<Resource<Book>>>
     BooksProcessor(EntityLinks links) {
 
-        return new ResourceProcessor<PagedResources<Resource<Books>>>() {
+        return new ResourceProcessor<PagedResources<Resource<Book>>>() {
             @Override
-            public PagedResources<Resource<Books>> process(PagedResources<Resource<Books>> resource) {
-                resource.add(links.linkFor(Books.class).slash("booksapi").slash("mostexpensive").withRel("mostexpensive"));
+            public PagedResources<Resource<Book>> process(PagedResources<Resource<Book>> resource) {
+                resource.add(links.linkFor(Book.class).slash("booksapi").slash("mostexpensive").withRel("mostexpensive"));
                 return resource;
             }
         };

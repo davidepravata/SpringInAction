@@ -15,7 +15,7 @@ PRIMARY KEY (`id`),
 UNIQUE KEY(isbn)
 ) */
 @Entity
-public class Books {
+public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -30,14 +30,14 @@ public class Books {
     @Column(name="isbn")
     private String isbn;
 
-    public Books(long id, @NotNull(message = "Invalid empty title") String title, @Pattern(regexp = "[0-9]+(.[0-9]{1,2})?", message = "Invalid price") String cost, @NotNull(message = "Invalid empty price") @Size(min = 13, max = 13, message = "Size not valid for isbn, must be 13 chars") String isbn) {
+    public Book(long id, @NotNull(message = "Invalid empty title") String title, @Pattern(regexp = "[0-9]+(.[0-9]{1,2})?", message = "Invalid price") String cost, @NotNull(message = "Invalid empty price") @Size(min = 13, max = 13, message = "Size not valid for isbn, must be 13 chars") String isbn) {
         this.id = id;
         this.title = title;
         this.cost = cost;
         this.isbn = isbn;
     }
 
-    public Books() { }
+    public Book() { }
 
     public long getId() {
         return id;
@@ -73,7 +73,7 @@ public class Books {
 
     @Override
     public String toString() {
-        return "Books{" +
+        return "Book{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", cost=" + cost +

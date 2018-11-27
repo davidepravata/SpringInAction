@@ -1,6 +1,6 @@
 package library.restapi.hyperlinks;
 
-import library.entities.Books;
+import library.entities.Book;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.rest.webmvc.RepositoryRestController;
@@ -18,7 +18,7 @@ public class RestAPIBooksControllerWithHyperLinks {
     @GetMapping(path="/booksapi/mostexpensive", produces="application/hal+json")
     public ResponseEntity<Resources<BooksResource>> mostExpensiveBooks() {
         PageRequest page = PageRequest.of(0, 3, Sort.by("cost").descending());
-        List<Books> books = booksRepositoryJPA.findAll(page).getContent();
+        List<Book> books = booksRepositoryJPA.findAll(page).getContent();
         List<BooksResource> booksResources = new BooksResourceAssembler().toResources(books);
         Resources<BooksResource> recentResources = new Resources<BooksResource>(booksResources);
         recentResources.add(linkTo(methodOn(RestAPIBooksControllerWithHyperLinks.class).mostExpensiveBooks()).withRel("mostexpensives"));
@@ -33,8 +33,8 @@ public class RestAPIBooksControllerWithHyperLinks {
 
     /*
     @GetMapping("/{id}")
-    public ResponseEntity<Books> booksById(@PathVariable("id") Long id) {
-        Optional<Books> optionalBooks = booksRepositoryJPA.findById(id);
+    public ResponseEntity<Book> booksById(@PathVariable("id") Long id) {
+        Optional<Book> optionalBooks = booksRepositoryJPA.findById(id);
         if (optionalBooks.isPresent()) {
             return new ResponseEntity<>(optionalBooks.get(), HttpStatus.OK);
         }

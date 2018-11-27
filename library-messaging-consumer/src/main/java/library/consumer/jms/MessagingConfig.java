@@ -1,6 +1,6 @@
 package library.consumer.jms;
 
-import library.entities.Books;
+import library.entities.Book;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -18,7 +18,7 @@ public class MessagingConfig {
         MappingJackson2MessageConverter messageConverter = new MappingJackson2MessageConverter();
         messageConverter.setTypeIdPropertyName("_typeId");
         Map<String, Class<?>> typeIdMappings = new HashMap<String, Class<?>>();
-        typeIdMappings.put("books", Books.class);
+        typeIdMappings.put("books", Book.class);
         messageConverter.setTypeIdMappings(typeIdMappings);
         return messageConverter;
     }

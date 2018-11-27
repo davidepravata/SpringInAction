@@ -1,21 +1,21 @@
 package library.restapi.hyperlinks;
 
-import library.entities.Books;
+import library.entities.Book;
 import org.springframework.hateoas.mvc.ResourceAssemblerSupport;
 
-public class BooksResourceAssembler extends ResourceAssemblerSupport<Books, BooksResource> {
+public class BooksResourceAssembler extends ResourceAssemblerSupport<Book, BooksResource> {
 
     public BooksResourceAssembler() {
         super(RestAPIBooksControllerWithHyperLinks.class, BooksResource.class);
     }
 
     @Override
-    protected BooksResource instantiateResource(Books book) {
+    protected BooksResource instantiateResource(Book book) {
         return new BooksResource(book);
     }
 
     @Override
-    public BooksResource toResource(Books book) {
+    public BooksResource toResource(Book book) {
         return createResourceWithId(book.getId(), book);
     }
 

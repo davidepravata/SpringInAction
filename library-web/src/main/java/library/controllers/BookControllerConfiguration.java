@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @ConfigurationProperties(prefix="books.settings")
-public class BooksControllerConfigurations {
+public class BookControllerConfiguration {
     private int pageSize=1;
     private boolean orderByIdDesc = false;
 

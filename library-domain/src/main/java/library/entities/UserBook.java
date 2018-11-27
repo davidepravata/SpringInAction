@@ -15,7 +15,7 @@ create table users_books(
     PRIMARY KEY(id)
 ) */
 @Entity
-public class UsersBooks {
+public class UserBook {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -60,7 +60,7 @@ public class UsersBooks {
 
     @Override
     public String toString() {
-        return "library.entities.UsersBooks{" +
+        return "library.entities.UserBook{" +
                 "id=" + id +
                 ", id_user=" + id_user +
                 ", id_book=" + id_book +

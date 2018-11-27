@@ -1,7 +1,6 @@
 package library.controllers;
 
-import library.controllers.BooksControllerConfigurations;
-import library.entities.Books;
+import library.entities.Book;
 import library.repositories.jpa.BooksRepositoryJPA;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
@@ -19,38 +18,38 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/books")
-public class BooksController {
-    private BooksControllerConfigurations booksControllerConfigurations;
+public class BookController {
+    private BookControllerConfiguration bookControllerConfiguration;
     private BooksRepositoryJPA booksRepositoryJPA;
 
     @Autowired
-    public BooksController(BooksRepositoryJPA booksRepositoryJPA, BooksControllerConfigurations booksControllerConfigurations) {
+    public BookController(BooksRepositoryJPA booksRepositoryJPA, BookControllerConfiguration bookControllerConfiguration) {
         this.booksRepositoryJPA = booksRepositoryJPA;
-        this.booksControllerConfigurations = booksControllerConfigurations;
+        this.bookControllerConfiguration = bookControllerConfiguration;
     }
 
     @GetMapping
     public String retrieveAvailableBooks(Model model) {
-        Pageable pageable = PageRequest.of(0, booksControllerConfigurations.getPageSize());
-        List<Books> availableBooks = null;
-        if(booksControllerConfigurations.isOrderByIdDesc()) {
+        Pageable pageable = PageRequest.of(0, bookControllerConfiguration.getPageSize());
+        List<Book> availableBooks = null;
+        if(bookControllerConfiguration.isOrderByIdDesc()) {
             availableBooks = booksRepositoryJPA.findBooksOrderByIdDesc(pageable);
         } else {
             availableBooks = booksRepositoryJPA.findBooks(pageable);
         }
 
-        //List<Books> availableBooks = booksRepositoryJDBC.findAllBooks();
+        //List<Book> availableBooks = booksRepositoryJDBC.findAllBooks();
         if (availableBooks != null) {
             model.addAttribute("books", availableBooks);
         }
-        model.addAttribute("new_book", new Books());
+        model.addAttribute("new_book", new Book());
         return "books";
     }
 
 
 
     @PostMapping
-    public String addBooks(@Valid @ModelAttribute("new_book") Books book, Errors errors) {
+    public String addBooks(@Valid @ModelAttribute("new_book") Book book, Errors errors) {
         if(errors.hasErrors()) {
             return "books";
         }

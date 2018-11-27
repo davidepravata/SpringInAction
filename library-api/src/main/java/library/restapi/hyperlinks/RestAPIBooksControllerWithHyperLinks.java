@@ -15,7 +15,7 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
 @RepositoryRestController
 public class RestAPIBooksControllerWithHyperLinks {
-    @GetMapping(path="/booksapi/mostexpensive", produces="application/hal+json")
+    //@GetMapping(path="/booksapi/mostexpensive", produces="application/hal+json")
     public ResponseEntity<Resources<BooksResource>> mostExpensiveBooks() {
         PageRequest page = PageRequest.of(0, 3, Sort.by("cost").descending());
         List<Book> books = booksRepositoryJPA.findAll(page).getContent();

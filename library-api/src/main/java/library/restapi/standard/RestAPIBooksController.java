@@ -1,4 +1,4 @@
-package library.restapi;
+package library.restapi.standard;
 
 import library.entities.Book;
 import org.springframework.data.domain.PageRequest;

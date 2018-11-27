@@ -12,9 +12,4 @@ public class LibraryConsumerApp implements WebMvcConfigurer {
 		SpringApplication.run(LibraryConsumerApp.class, args);
 	}
 
-	@Override
-	public void addViewControllers(ViewControllerRegistry registry) {
-		registry.addRedirectViewController("/", "/books");
-		//registry.addViewController("/login");
-	}
 }

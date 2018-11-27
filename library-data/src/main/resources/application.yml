@@ -1,0 +1,10 @@
+spring:
+    datasource:
+        url: jdbc:mysql://localhost:3306/spring?useSSL=false&&serverTimezone=Europe/Rome
+        username: spring
+        password: mf15mdj
+        validation-query: select 1
+    schema:
+        - schema.sql
+    data:
+        - data.sql

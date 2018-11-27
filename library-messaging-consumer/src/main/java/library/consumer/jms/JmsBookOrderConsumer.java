@@ -19,7 +19,9 @@ public class JmsBookOrderConsumer implements BookOrderConsumer {
   @Override
   public Book receiveBookOrder() {
     log.info("Message Received on JMS");
-    return (Book) jms.receiveAndConvert("library.books.queue");
+    Book receivedBook=(Book) jms.receiveAndConvert("library-books-queue");
+    log.info("Book Received[" + receivedBook + "]");
+    return receivedBook;
   }
   
 }

@@ -25,7 +25,8 @@ public class JmsBookOrderProducer implements BookOrderProducer {
   @Override
   public void produceBookOrder(Book book) {
     log.info("Going to produce message on JMS");
-    jms.convertAndSend(book);
+    jms.convertAndSend("library-books-queue",book);
+    log.info("All seems ok");
   }
   
 }

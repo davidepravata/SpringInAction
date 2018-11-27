@@ -8,7 +8,7 @@ import org.springframework.jms.support.converter.MappingJackson2MessageConverter
 import java.util.HashMap;
 import java.util.Map;
 
-@Profile({"library.consumer.jms-template", "library.consumer.jms-listener"})
+//@Profile({"library.consumer.jms-template", "library.consumer.jms-listener"})
 @Configuration
 public class MessagingConfig {
 

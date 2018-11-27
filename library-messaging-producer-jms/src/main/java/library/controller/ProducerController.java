@@ -1,27 +1,26 @@
 package library.controller;
 
 import library.entities.Book;
-import library.repositories.jpa.BooksRepositoryJPA;
+import library.producer.jms.JmsBookOrderProducer;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Optional;
 
 @RestController
 @RequestMapping(path="/messaging",produces="application/json")
 @CrossOrigin(origins="*")
 public class ProducerController {
 
-    private BooksRepositoryJPA booksRepositoryJPA;
+    private JmsBookOrderProducer jmsBookOrderProducer;
 
-    public ProducerController(BooksRepositoryJPA booksRepositoryJPA) {
-        this.booksRepositoryJPA = booksRepositoryJPA;
+    public ProducerController(JmsBookOrderProducer jmsBookOrderProducer) {
+        this.jmsBookOrderProducer = jmsBookOrderProducer;
     }
 
     @PostMapping(path = "/addmsg", consumes="application/json")
     @ResponseStatus(HttpStatus.CREATED)
     public Book addMsg(@RequestBody Book book) {
-        return booksRepositoryJPA.save(book);
+        jmsBookOrderProducer.produceBookOrder(book);
+        return book;
     }
 }
 

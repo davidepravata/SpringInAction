@@ -12,9 +12,4 @@ public class LibraryKafkaProducerApp implements WebMvcConfigurer {
 		SpringApplication.run(LibraryKafkaProducerApp.class, args);
 	}
 
-	@Override
-	public void addViewControllers(ViewControllerRegistry registry) {
-		registry.addRedirectViewController("/", "/books");
-		//registry.addViewController("/login");
-	}
 }

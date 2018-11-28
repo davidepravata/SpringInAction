@@ -1,4 +1,4 @@
-package library.consumer.jms;
+package library.consumer.kafka;
 
 import library.consumer.BookOrderConsumer;
 import library.entities.Book;
@@ -9,18 +9,18 @@ import org.springframework.stereotype.Component;
 @Slf4j
 //@Profile("library.consumer.jms-template")
 @Component//("templateBooksOrderReceiver")
-public class JmsBookOrderConsumer implements BookOrderConsumer {
+public class KafkaBookOrderConsumer implements BookOrderConsumer {
 
   private JmsTemplate jms;
 
-  public JmsBookOrderConsumer(JmsTemplate jms) {
+  public KafkaBookOrderConsumer(JmsTemplate jms) {
     this.jms = jms;
   }
   
   @Override
   public Book receiveBookOrder() {
     log.info("Message Received on JMS");
-    Book receivedBook=(Book) jms.receiveAndConvert("library-books-artemis-queue");
+    Book receivedBook=(Book) jms.receiveAndConvert("library-books-kafka-topic");
     log.info("Book Received[" + receivedBook + "]");
     return receivedBook;
   }

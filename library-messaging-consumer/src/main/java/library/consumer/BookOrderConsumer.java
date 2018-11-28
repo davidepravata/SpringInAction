@@ -1,4 +1,4 @@
-package library.consumer.jms;
+package library.consumer;
 
 import library.entities.Book;
 

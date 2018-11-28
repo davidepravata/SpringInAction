@@ -22,7 +22,6 @@ public class ProducerController {
     @ResponseStatus(HttpStatus.CREATED)
     public Book addMsg(@RequestBody Book book) {
         jmsBookOrderProducer.produceBookOrder(book);
-        log.info("Message added");
         return book;
     }
 }

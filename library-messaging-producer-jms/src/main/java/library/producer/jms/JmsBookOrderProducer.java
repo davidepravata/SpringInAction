@@ -10,10 +10,8 @@ import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.Session;
 
-
 @Slf4j
-//@Profile("library.consumer.jms-template")
-@Component//("templateBooksOrderReceiver")
+@Component
 public class JmsBookOrderProducer implements BookOrderProducer {
 
   private JmsTemplate jms;
@@ -25,8 +23,7 @@ public class JmsBookOrderProducer implements BookOrderProducer {
   @Override
   public void produceBookOrder(Book book) {
     log.info("Going to produce message on JMS");
-    jms.convertAndSend("library-books-queue",book);
-    log.info("All seems ok");
+    jms.convertAndSend("library-books-artemis-queue",book);
   }
   
 }

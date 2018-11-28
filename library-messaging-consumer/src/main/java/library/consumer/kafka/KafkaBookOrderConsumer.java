@@ -7,8 +7,7 @@ import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Component;
 
 @Slf4j
-//@Profile("library.consumer.jms-template")
-@Component//("templateBooksOrderReceiver")
+@Component
 public class KafkaBookOrderConsumer implements BookOrderConsumer {
 
   private JmsTemplate jms;

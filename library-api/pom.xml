@@ -35,11 +35,6 @@
             <artifactId>library-security</artifactId>
             <version>${library.version}</version>
         </dependency>
-        <dependency>
-            <groupId>test</groupId>
-            <artifactId>library-messaging-producer-library.consumer.jms</artifactId>
-        <version>${library.version}</version>
-        </dependency>
         <!--<dependency>
             <groupId>test</groupId>
                 <artifactId>library-messaging-producer-library.consumer.kafka</artifactId>

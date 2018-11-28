@@ -1,6 +1,7 @@
 package library.producer.rabbitmq;
 
 import library.entities.Book;
+import library.entities.serialized.SerializedBook;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ public class RabbitMQBookOrderProducer implements BookOrderProducer {
 
     public void produceBookOrder(Book book) {
         log.info("Producing message for [" + book + "]");
-        rabbit.convertAndSend("library-books-rabbit-key", book);
+        rabbit.convertAndSend("library-books-rabbit-key", new SerializedBook(book));
     }
 
 }

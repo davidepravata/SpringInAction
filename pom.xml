@@ -18,11 +18,12 @@
         <module>library-messaging-producer-kafka</module>
         <module>library-messaging-producer-rabbitmq</module>
         <module>library-messaging-consumer</module>
+        <module>library-integration</module>
     </modules>
 
 
     <name>SpringInAction</name>
-    <description>Demo project for SpringInAction</description>
+    <description>SpringInAction</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>

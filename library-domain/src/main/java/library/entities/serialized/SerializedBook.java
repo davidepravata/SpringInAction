@@ -39,7 +39,7 @@ public class SerializedBook implements Serializable {
         book.setTitle(serializedBook.getTitle());
         book.setId(serializedBook.getId());
         book.setIsbn(serializedBook.getIsbn());
-        book.setTitle(serializedBook.getTitle());
+        book.setCost(serializedBook.getCost());
         return book;
     }
 

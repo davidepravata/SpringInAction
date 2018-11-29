@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Component
 public class RabbitMQConsumerListener {
-    @RabbitListener(queues = "library-books-rabbit-queue")
+    //@RabbitListener(queues = "library-books-rabbit-queue")
     public void receiveBookOrder(SerializedBook serializedBook) {
         Book book = serializedBook.getBook(serializedBook);
         log.info("Listener Book received[" + book + "]");

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Component
 public class KafkaConsumerListener {
-    @KafkaListener(topics = "library-books-kafka-topic")
+    //@KafkaListener(topics = "library-books-kafka-topic")
     public void receiveBookOrder(SerializedBook serializedBook) {
         Book book = serializedBook.getBook(serializedBook);
         log.info("Listener Book received[" + book + "]");

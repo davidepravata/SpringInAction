@@ -19,6 +19,7 @@ public class ProducerController {
 
     @PostMapping(path = "/addmsg", consumes="application/json")
     public Book addMsg(@RequestBody Book book) {
+        log.info("Received request to add message");
         kafkaBookOrderProducer.produceBookOrder(book);
         log.info("Message added");
         return book;

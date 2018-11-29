@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Component
 public class JmsConsumerListener {
-    @JmsListener(destination = "library-books-artemis-queue")
+    //@JmsListener(destination = "library-books-artemis-queue")
     public void receiveBookOrder(Book book) {
         log.info("Listener Book received[" + book + "]");
     }

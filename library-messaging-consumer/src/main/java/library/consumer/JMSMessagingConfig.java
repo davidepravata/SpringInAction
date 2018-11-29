@@ -1,4 +1,4 @@
-package library.consumer.jms;
+package library.consumer;
 
 import library.entities.Book;
 import org.springframework.context.annotation.Bean;
@@ -9,10 +9,11 @@ import org.springframework.jms.support.converter.MappingJackson2MessageConverter
 import java.util.HashMap;
 import java.util.Map;
 
-@Configuration
-public class MessagingConfig {
 
-    @Bean
+//@Configuration
+public class JMSMessagingConfig {
+
+  //  @Bean
     public MappingJackson2MessageConverter messageConverter() {
         MappingJackson2MessageConverter messageConverter = new MappingJackson2MessageConverter();
         messageConverter.setTypeIdPropertyName("_typeId");

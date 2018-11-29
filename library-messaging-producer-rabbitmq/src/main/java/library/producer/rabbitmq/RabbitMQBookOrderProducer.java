@@ -23,5 +23,4 @@ public class RabbitMQBookOrderProducer implements BookOrderProducer {
         log.info("Producing message for [" + book + "]");
         rabbit.convertAndSend("library-books-rabbit-queue", new SerializedBook(book));
     }
-
 }

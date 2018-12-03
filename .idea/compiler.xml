@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -9,13 +10,11 @@
         <module name="library-api" />
         <module name="library-data" />
         <module name="library-domain" />
+        <module name="library-integration" />
         <module name="library-messaging" />
         <module name="library-messaging-consumer" />
         <module name="library-messaging-producer-jms" />
         <module name="library-messaging-producer-kafka" />
-        <module name="library-messaging-producer-library.consumer.jms" />
-        <module name="library-messaging-producer-library.consumer.kafka" />
-        <module name="library-messaging-producer-library.consumer.rabbitmq" />
         <module name="library-messaging-producer-rabbitmq" />
         <module name="library-security" />
         <module name="library-web" />
@@ -35,6 +34,7 @@
       <module name="library-api" target="1.8" />
       <module name="library-data" target="1.8" />
       <module name="library-domain" target="1.8" />
+      <module name="library-integration" target="1.8" />
       <module name="library-messaging" target="1.8" />
       <module name="library-messaging-consumer" target="1.8" />
       <module name="library-messaging-producer-jms" target="1.8" />
@@ -67,6 +67,7 @@
       <module name="library-api" options="-parameters" />
       <module name="library-data" options="-parameters" />
       <module name="library-domain" options="-parameters" />
+      <module name="library-integration" options="-parameters" />
       <module name="library-messaging" options="-parameters" />
       <module name="library-messaging-consumer" options="-parameters" />
       <module name="library-messaging-producer-jms" options="-parameters" />

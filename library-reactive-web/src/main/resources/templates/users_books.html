@@ -1,0 +1,91 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>USERS TO BOOKS LIST:</title>
+    <link rel="stylesheet" th:href="@{/style.css}"></link>
+</head>
+
+<body>
+<h2>USERS TO BOOKS LIST:</h2>
+<p>Below the list of books registered to users:</p>
+
+<div th:unless="${#lists.isEmpty(users_books)}">
+    <table class="blueTable">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Username</th>
+        </tr>
+        </thead>
+        <tbody>
+        <dl th:each="title_username : ${titles_usernames}">
+            <tr>
+                <td><span th:text="${title_username.title}"></span></td>
+                <td><span th:text="${title_username.username}"></span></td>
+            </tr>
+        </dl>
+        </tbody>
+    </table>
+
+</div>
+<div th:if="${#lists.isEmpty(users_books)}">
+    <p>No users have registered a book</p>
+</div>
+
+<h3>Register a book to a user:</h3>
+
+
+<!--<form method="POST">
+    <select th:field="${allPossibilities}">
+        <option th:each="onePossibility : ${allPossibilities}"
+                th:value="${onePossibility}"
+                th:text="${onePossibility}">${onePossibility}</option>
+    </select>
+    <input type="submit"/>
+</form> -->
+<p>Choose the user who is reading the book:</p>
+<form method="POST">
+    <select th:field="${users}">
+        <option th:each="user : ${users}"
+                th:value="${user}"
+                th:text="${user}">${user}</option>
+    </select>
+    <input type="submit"/>
+</form>
+
+<p>Choose the book he is reading:</p>
+<form method="POST">
+    <select th:field="${books}">
+        <option th:each="book : ${books}"
+                th:value="${book}"
+                th:text="${book}">${book}</option>
+    </select>
+    <input type="submit"/>
+</form> -->
+
+<!--
+<form method="POST">
+    <select th:field="${users_books}">
+        <option th:each="user_book : ${users_books}"
+                th:value="${user_book}"
+                th:text="${user_book}">${user_book}</option>
+    </select>
+    <input type="submit"/>
+</form>
+-->
+<table style="border-color: FFFFFF; background-color: #a3edff;">
+    <tbody>
+    <tr>
+        <td><a href="../users">Users Menu</a> &nbsp;</td>
+    </tr>
+    <tr>
+        <td><a href="../books">Books Menu</a></td>
+    </tr>
+    <tr>
+        <td><a href="../users_books">Users VS Books Menu</a></td>
+    </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+
+</body>
+</html>

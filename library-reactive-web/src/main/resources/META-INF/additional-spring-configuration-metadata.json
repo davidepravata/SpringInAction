@@ -1,0 +1,14 @@
+{
+  "properties":[
+    {
+      "name":"books.settings.pagesize",
+      "type":"java.lang.String",
+      "description":"Sets the maximum number of books shown in the list."
+    },
+    {
+      "name":"books.settings.orderbyiddesc",
+      "type":"java.lang.Boolean",
+      "description":"Sets if inverted order should be used showing the records."
+    }
+  ]
+}

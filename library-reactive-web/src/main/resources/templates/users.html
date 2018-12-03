@@ -1,0 +1,66 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>USERS LIST:</title>
+    <link rel="stylesheet" th:href="@{/style.css}"></link>
+</head>
+
+<body>
+<h2>USERS LIST:</h2>
+<p>Below the list of registered users:</p>
+
+<div th:unless="${#lists.isEmpty(users)}">
+    <table class="blueTable">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <dl th:each="user : ${users}">
+    <tr>
+        <td><span th:text="${user.id}"></span></td>
+        <td><span th:text="${user.username}"></span></td>
+        <td><span th:text="${user.password}"></span></td>
+        <td><span th:text="${user.email}"></span></td>
+    </tr>
+    </dl>
+    </tbody>
+    </table>
+
+</div>
+<div th:if="${#lists.isEmpty(users)}">
+    <p>No users have registered</p>
+</div>
+
+<h3>Register a new user:</h3>
+<form method="POST">
+    <label for="username">Username:</label>
+    <input type="text" name="username" size="50"></input><br/>
+    <label for="password">Password:</label>
+    <input type="text" name="password" size="50"></input><br/>
+    <label for="email">Email:</label>
+    <input type="text" name="email" size="15"></input><br/>
+    <input type="submit">
+    </input>
+</form>
+
+<table style="border-color: FFFFFF; background-color: #a3edff;">
+    <tbody>
+    <tr>
+        <td><a href="../users">Users Menu</a> &nbsp;</td>
+    </tr>
+    <tr>
+        <td><a href="../books">Books Menu</a></td>
+    </tr>
+    <tr>
+        <td><a href="../users_books">Users VS Books Menu</a></td>
+    </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+
+</body>
+</html>

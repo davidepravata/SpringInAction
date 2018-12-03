@@ -1,0 +1,82 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>BOOKS LIST:</title>
+    <link rel="stylesheet" th:href="@{/style.css}"></link>
+</head>
+
+<body>
+<h2>BOOKS LIST:</h2>
+<p>Below the list of available books:</p>
+
+<div th:unless="${#lists.isEmpty(books)}">
+    <table class="blueTable">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Cost</th>
+        <th>ISBN</th>
+    </tr>
+    </thead>
+    <tbody>
+    <dl th:each="book : ${books}">
+    <tr>
+        <td><span th:text="${book.id}"></span></td>
+        <td><span th:text="${book.title}"></span></td>
+        <td><span th:text="${book.cost}"></span></td>
+        <td><span th:text="${book.isbn}"></span></td>
+    </tr>
+    </dl>
+    </tbody>
+    </table>
+
+</div>
+<div th:if="${#lists.isEmpty(books)}">
+    <p>No books have been registered</p>
+</div>
+
+<h3>Register a new book:</h3>
+<form method="post">
+    <table>
+        <tr>
+            <td>Title:</td>
+            <td><input type="text" th:field="*{new_book.title}" /></td>
+            <td th:if="${#fields.hasErrors('new_book.title')}" th:errors="*{new_book.title}">Title Error</td>
+        </tr>
+        <tr>
+            <td>Cost:</td>
+            <td><input type="text" th:field="*{new_book.cost}" /></td>
+            <td th:if="${#fields.hasErrors('new_book.cost')}" th:errors="*{new_book.cost}">Cost Error</td>
+        </tr>
+        <tr>
+            <td>isbn:</td>
+            <td><input type="text" th:field="*{new_book.isbn}" /></td>
+            <td th:if="${#fields.hasErrors('new_book.isbn')}" th:errors="*{new_book.isbn}">isbn Error</td>
+        </tr>
+        <tr>
+            <td><button type="submit">Submit</button></td>
+        </tr>
+    </table>
+</form>
+
+<table style="border-color: FFFFFF; background-color: #a3edff;">
+    <tbody>
+    <tr>
+        <td><a href="../users">Users Menu</a> &nbsp;</td>
+    </tr>
+    <tr>
+        <td><a href="../books">Books Menu</a></td>
+    </tr>
+    <tr>
+        <td><a href="../users_books">Users VS Books Menu</a></td>
+    </tr>
+    <tr>
+        <td><form method="POST" th:action="@{/logout}">
+            <input type="submit" value="Logout"/>
+        </form></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

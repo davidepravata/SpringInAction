@@ -5,6 +5,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/library-integration/pom.xml" />
+        <option value="$PROJECT_DIR$/library-reactive-web/pom.xml" />
       </list>
     </option>
   </component>

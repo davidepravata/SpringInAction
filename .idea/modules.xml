@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/library-messaging-producer-jms/library-messaging-producer-jms.iml" filepath="$PROJECT_DIR$/library-messaging-producer-jms/library-messaging-producer-jms.iml" />
       <module fileurl="file://$PROJECT_DIR$/library-messaging-producer-kafka/library-messaging-producer-kafka.iml" filepath="$PROJECT_DIR$/library-messaging-producer-kafka/library-messaging-producer-kafka.iml" />
       <module fileurl="file://$PROJECT_DIR$/library-messaging-producer-rabbitmq/library-messaging-producer-rabbitmq.iml" filepath="$PROJECT_DIR$/library-messaging-producer-rabbitmq/library-messaging-producer-rabbitmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library-reactive-web/library-reactive-web.iml" filepath="$PROJECT_DIR$/library-reactive-web/library-reactive-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/library-security/library-security.iml" filepath="$PROJECT_DIR$/library-security/library-security.iml" />
       <module fileurl="file://$PROJECT_DIR$/library-web/library-web.iml" filepath="$PROJECT_DIR$/library-web/library-web.iml" />
     </modules>

@@ -3,7 +3,6 @@
   <component name="Encoding" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library-api" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/library-app" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library-data" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library-domain" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library-integration" charset="UTF-8" />
@@ -11,6 +10,7 @@
     <file url="file://$PROJECT_DIR$/library-messaging-producer-jms" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library-messaging-producer-kafka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library-messaging-producer-rabbitmq" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/library-reactive-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library-security" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library-web" charset="UTF-8" />
   </component>

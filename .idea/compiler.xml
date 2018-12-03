@@ -16,6 +16,7 @@
         <module name="library-messaging-producer-jms" />
         <module name="library-messaging-producer-kafka" />
         <module name="library-messaging-producer-rabbitmq" />
+        <module name="library-reactive-web" />
         <module name="library-security" />
         <module name="library-web" />
         <module name="libraryapi" />
@@ -43,6 +44,7 @@
       <module name="library-messaging-producer-library.consumer.kafka" target="1.8" />
       <module name="library-messaging-producer-library.consumer.rabbitmq" target="1.8" />
       <module name="library-messaging-producer-rabbitmq" target="1.8" />
+      <module name="library-reactive-web" target="1.8" />
       <module name="library-security" target="1.8" />
       <module name="library-web" target="1.8" />
       <module name="libraryapi" target="1.8" />
@@ -76,6 +78,7 @@
       <module name="library-messaging-producer-library.consumer.kafka" options="-parameters" />
       <module name="library-messaging-producer-library.consumer.rabbitmq" options="-parameters" />
       <module name="library-messaging-producer-rabbitmq" options="-parameters" />
+      <module name="library-reactive-web" options="-parameters" />
       <module name="library-security" options="-parameters" />
       <module name="library-web" options="-parameters" />
       <module name="libraryapi" options="-parameters" />

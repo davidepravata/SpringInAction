@@ -12,8 +12,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 import javax.validation.Valid;
+import java.time.Duration;
 import java.util.List;
 
 @Controller
@@ -31,14 +34,13 @@ public class BookControllerReactive {
     @GetMapping
     public String retrieveAvailableBooks(Model model) {
         Pageable pageable = PageRequest.of(0, bookControllerConfigurationReactive.getPageSize());
-        List<Book> availableBooks = null;
+        Flux<Book> availableBooks = null;
         if(bookControllerConfigurationReactive.isOrderByIdDesc()) {
-            availableBooks = booksRepositoryJPA.findBooksOrderByIdDesc(pageable);
+            availableBooks = Flux.fromIterable(booksRepositoryJPA.findBooksOrderByIdDesc(pageable));
         } else {
-            availableBooks = booksRepositoryJPA.findBooks(pageable);
+            availableBooks = Flux.fromIterable(booksRepositoryJPA.findBooks(pageable));
         }
 
-        //List<Book> availableBooks = booksRepositoryJDBC.findAllBooks();
         if (availableBooks != null) {
             model.addAttribute("books", availableBooks);
         }
@@ -49,11 +51,11 @@ public class BookControllerReactive {
 
 
     @PostMapping
-    public String addBooks(@Valid @ModelAttribute("new_book") Book book, Errors errors) {
+    public String addBooks(@Valid @ModelAttribute("new_book") Flux<Book> bookFlux, Errors errors) {
         if(errors.hasErrors()) {
             return "books";
         }
-        booksRepositoryJPA.save(book);
+        booksRepositoryJPA.saveAll(bookFlux.toIterable());
         return "redirect:/books";
     }
 }

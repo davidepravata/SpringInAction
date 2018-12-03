@@ -11,10 +11,4 @@ public class LibraryReactiveApp implements WebMvcConfigurer {
 	public static void main(String[] args) {
 		SpringApplication.run(LibraryReactiveApp.class, args);
 	}
-
-	@Override
-	public void addViewControllers(ViewControllerRegistry registry) {
-		registry.addRedirectViewController("/", "/books");
-		//registry.addViewController("/login");
-	}
 }

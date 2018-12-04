@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/library-api/library-api.iml" filepath="$PROJECT_DIR$/library-api/library-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/library-data/library-data.iml" filepath="$PROJECT_DIR$/library-data/library-data.iml" />
       <module fileurl="file://$PROJECT_DIR$/library-domain/library-domain.iml" filepath="$PROJECT_DIR$/library-domain/library-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library-eureka/library-eureka.iml" filepath="$PROJECT_DIR$/library-eureka/library-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/library-integration/library-integration.iml" filepath="$PROJECT_DIR$/library-integration/library-integration.iml" />
       <module fileurl="file://$PROJECT_DIR$/library-messaging-consumer/library-messaging-consumer.iml" filepath="$PROJECT_DIR$/library-messaging-consumer/library-messaging-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/library-messaging-producer-jms/library-messaging-producer-jms.iml" filepath="$PROJECT_DIR$/library-messaging-producer-jms/library-messaging-producer-jms.iml" />

@@ -15,6 +15,7 @@
       <module fileurl="file://$PROJECT_DIR$/library-reactive-web/library-reactive-web.iml" filepath="$PROJECT_DIR$/library-reactive-web/library-reactive-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/library-security/library-security.iml" filepath="$PROJECT_DIR$/library-security/library-security.iml" />
       <module fileurl="file://$PROJECT_DIR$/library-web/library-web.iml" filepath="$PROJECT_DIR$/library-web/library-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libray-eureka-client/libray-eureka-client.iml" filepath="$PROJECT_DIR$/libray-eureka-client/libray-eureka-client.iml" />
     </modules>
   </component>
 </project>

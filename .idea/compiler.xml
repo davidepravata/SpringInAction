@@ -28,6 +28,7 @@
         <module name="librarymessagingjms" />
         <module name="librarysecurity" />
         <module name="libraryweb" />
+        <module name="libray-eureka-client" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -60,6 +61,7 @@
       <module name="librarymessagingproducerrabbitmq" target="1.8" />
       <module name="librarysecurity" target="1.8" />
       <module name="libraryweb" target="1.8" />
+      <module name="libray-eureka-client" target="1.8" />
       <module name="SpringInAction" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -95,6 +97,7 @@
       <module name="librarymessagingproducerrabbitmq" options="-parameters" />
       <module name="librarysecurity" options="-parameters" />
       <module name="libraryweb" options="-parameters" />
+      <module name="libray-eureka-client" options="-parameters" />
     </option>
   </component>
 </project>

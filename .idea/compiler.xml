@@ -10,7 +10,6 @@
         <module name="library-api" />
         <module name="library-data" />
         <module name="library-domain" />
-        <module name="library-eureka" />
         <module name="library-integration" />
         <module name="library-messaging" />
         <module name="library-messaging-consumer" />
@@ -28,7 +27,6 @@
         <module name="librarymessagingjms" />
         <module name="librarysecurity" />
         <module name="libraryweb" />
-        <module name="libray-eureka-client" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -37,7 +35,7 @@
       <module name="library-api" target="1.8" />
       <module name="library-data" target="1.8" />
       <module name="library-domain" target="1.8" />
-      <module name="library-eureka" target="1.8" />
+      <module name="library-eureka-server-registry" target="1.8" />
       <module name="library-integration" target="1.8" />
       <module name="library-messaging" target="1.8" />
       <module name="library-messaging-consumer" target="1.8" />
@@ -73,7 +71,7 @@
       <module name="library-api" options="-parameters" />
       <module name="library-data" options="-parameters" />
       <module name="library-domain" options="-parameters" />
-      <module name="library-eureka" options="-parameters" />
+      <module name="library-eureka-server-registry" options="-parameters" />
       <module name="library-integration" options="-parameters" />
       <module name="library-messaging" options="-parameters" />
       <module name="library-messaging-consumer" options="-parameters" />

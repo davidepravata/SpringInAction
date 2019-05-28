@@ -39,8 +39,8 @@ create table user_book(
     id_user bigint(20) NOT NULL,
     id_book bigint(20) NOT NULL,
     time_purchase timestamp NOT NULL,
-    FOREIGN KEY (id_user) REFERENCES users(id),
-    FOREIGN KEY (id_book) REFERENCES books(id),
+    FOREIGN KEY (id_user) REFERENCES user(id),
+    FOREIGN KEY (id_book) REFERENCES book(id),
     UNIQUE KEY(id_user, id_book),
     PRIMARY KEY(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
